@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="eng" ng-app="ouradmin">
+<head>
+      <meta charset="utf-8">
+      <title>Admin Dashboard</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+      <link rel="stylesheet" href="ngProgress.css">
+      <link rel="stylesheet" href="css/main.css">
+</head>
+<body ng-controller="rootController">
+  <!-- Static navbar -->
+    <div class="container">
+      <a class="navbar-brand" href="javascript:">My Web Application</a>
+    </div>
+    <nav class="navbar navbar-blue navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#/main">Home</a></li>
+            <li><a href="javascript:">About</a></li>
+            <li><a href="javascript:">Contact</a></li>
+            <li><a href="#/user" ng-show="isAuthenticated">Users</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#/login/login" ng-show="!isAuthenticated">Login</a>
+              <a href="javascript:" ng-click="logout()" ng-show="isAuthenticated">Logout</a>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+
+
+  <div class="ngView"></div>
+  <script src="jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="angular.min.js"></script>
+  <script type="text/javascript" src="angular-resource.min.js"></script>
+  <script type="text/javascript" src="angular-route.min.js"></script>
+  <script type="text/javascript" src="js/base.min.js"></script>
+</body>
+</html>

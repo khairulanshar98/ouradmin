@@ -1,0 +1,8 @@
+{
+  "name": "ouradmin",
+  "private": "true",
+  "devDependencies": {},
+  "dependencies": {
+    "ngprogress": "^1.1.3"
+  }
+}

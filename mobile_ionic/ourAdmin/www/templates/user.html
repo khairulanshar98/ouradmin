@@ -1,0 +1,16 @@
+<ion-view>
+  <ion-nav-title>{{record.name}}</ion-nav-title>
+  <ion-content>
+    <div class="item item-body">
+      <center>
+        <img class="full-image" src="{{record.picture_url}}" style="width:60%">
+      </center>
+      <p>{{record.bio}}</p>
+      <p style="text-align:right;">
+        <a browseto="mailto:{{record.email}}" class="button button-stable button-small button-shadow">Email</a>
+        <a browseto="tel:{{record.mobile_no}}" class="button button-stable button-small button-shadow">Call</a>
+        <a browseto="sms:{{record.mobile_no}}" class="button button-stable button-small button-shadow">SMS</a>
+      </p>
+    </div>
+  </ion-content>
+</ion-view>

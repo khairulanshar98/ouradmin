@@ -1,0 +1,16 @@
+<ion-view>
+  <ion-nav-title>{{record.name}}</ion-nav-title>
+  <ion-content>
+    <div class="item item-body">
+      <center>
+        <img class="full-image" src="{{record.picture_url}}" style="width:60%">
+      </center>
+    <p>{{record.bio}}</p>
+    <p style="text-align:right;">
+      <a ng-href="mailto:{{record.email}}" target="_system" class="button button-stable button-small button-shadow">Email</a>
+      <a ng-href="tel:{{record.mobile_no}}" target="_system" class="button button-stable button-small button-shadow">Call</a>
+      <a ng-href="sms:{{record.mobile_no}}" target="_system" class="button button-stable button-small button-shadow">SMS</a>
+    </p>
+  </div>
+  </ion-content>
+</ion-view>

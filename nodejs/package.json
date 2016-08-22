@@ -1,0 +1,51 @@
+{
+  "name": "ouradmin",
+  "version": "0.0.1",
+  "description": "Working Example",
+  "engines": {
+    "node": "5.9.1"
+  },
+  "main": "ouradmin.js",
+  "scripts": {
+    "start": "node ouradmin.js"
+  },
+  "dependencies": {
+    "bcrypt": "^0.8.5",
+    "body-parser": "~1.9.2",
+    "bower": "^1.7.9",
+    "bytes": "^2.4.0",
+    "compression": "^1.6.2",
+    "ejs": "2.4.1",
+    "express": "4.13.3",
+    "h5bp": "^0.1.4",
+    "jwt-simple": "^0.3.1",
+    "less": "^2.7.1",
+    "mongodb": "^2.1.6",
+    "mongoose": "~4.2.4",
+    "morgan": "~1.5.0",
+    "node-minify": "^1.3.9",
+    "node-uuid": "^1.4.7",
+    "passport": "^0.3.0",
+    "passport-jwt": "^1.2.1",
+    "serve-favicon": "^2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.heroku.com/ouradmin.git"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express",
+    "heroku",
+    "coffe",
+    "khairulanshar",
+    "mongoose"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khairulanshar98/ouradmin/issues"
+  },
+  "homepage": "https://ouradmin.herokuapps.com/angular",
+  "author": "khairul anshar"
+}

@@ -1,0 +1,45 @@
+<script src="js/user.js"></script>
+<div class="container">
+      <form name="modelForm" id="modelForm" novalidate>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>NAME<br/><input class="form-control border-green input-sm" ng-model="search.name" type="text"></th>
+            <th>MOBILE NO<br/><input class="form-control border-green input-sm" ng-model="search.mobile_no" type="text"></th>
+            <th>EMAIL<br/><input class="form-control border-green input-sm" ng-model="search.email" type="text"></th>
+            <th>PICTURE URL<br/><input class="form-control border-green input-sm" ng-model="search.picture_url" type="text"></th>
+            <th class="text-right">&nbsp;</th>
+          </tr>
+
+        </thead>
+        <tbody>
+          <tr class="text-left">
+            <td><input class="form-control border-green input-sm" ng-model="itemmodel.name" type="text"></td>
+            <td><input class="form-control border-green input-sm" ng-model="itemmodel.mobile_no" type="text"></td>
+            <td><input class="form-control border-green input-sm" ng-model="itemmodel.email" type="text"></td>
+            <td><input class="form-control border-green input-sm" ng-model="itemmodel.picture_url" type="text"></td>
+            <td class="text-right">
+              <div class="btn-toolbar" role="toolbar" >
+                <div class="btn-group" role="group" ng-click="createnew()"><i class="fa fa-floppy-o" aria-hidden="true"></i></div>
+              </div>
+            </td>
+          </tr>
+          <tr ng-repeat="item in records | filter:search:strict" ng-init="setInit(item)" class="text-left">
+            <td><span ng-show="!item.isedit">{{item.name}}</span><input class="form-control border-green" ng-model="item.name" type="text" ng-show="item.isedit"></td>
+            <td><span ng-show="!item.isedit">{{item.mobile_no}}</span><input class="form-control border-green" ng-model="item.mobile_no" type="text" ng-show="item.isedit"></td>
+            <td><span>{{item.email}}</span></td>
+            <td><span ng-show="!item.isedit">{{item.picture_url}}</span><input class="form-control border-green" ng-model="item.picture_url" type="text" ng-show="item.isedit"></td>
+            <td>
+              <div class="btn-toolbar" role="toolbar" >
+                <div class="btn-group" role="group" ng-show="!item.isedit" ng-click="edit(item)"><i class="fa fa-pencil" aria-hidden="true"></i></div>
+                <div class="btn-group" role="group" ng-show="item.isedit" ng-click="save(item)"><i class="fa fa-floppy-o" aria-hidden="true"></i></div>
+                <div class="btn-group" role="group" ng-show="item.isedit" ng-click="delete(item)"><i class="fa fa-times" aria-hidden="true"></i></div>
+                <div class="btn-group" role="group" ng-show="item.isedit" ng-click="cancel(item)">Cancel</div>
+              </div>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </form>
+  </div>

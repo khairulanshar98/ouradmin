@@ -1,0 +1,8 @@
+{
+  "name": "Our Admin",
+  "description": "Working Example",
+  "repository": "https://git.heroku.com/ouradmin.git",
+  "logo": "http://www.dominicanjoe.com/img/logo.gif",
+  "keywords": ["node", "express", "static","heroku","admin","khairulanshar"],
+  "image": "heroku/nodejs"
+}
