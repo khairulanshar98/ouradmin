@@ -4,9 +4,10 @@
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
         <h1>Example</h1>
-        <p>
+        <p ng-show="isAuthenticated">
           <a class="btn btn-lg btn-primary" href="/#user" role="button">User</a>
         </p>
+        <p ng-show="!isAuthenticated">Please Signup and Login first to Access the Users page</p>
       </div>
 
     </div> <!-- /container -->
