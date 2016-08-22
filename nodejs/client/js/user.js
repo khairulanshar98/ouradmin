@@ -2,6 +2,7 @@ app.controller('user', ['$scope', '$resource','$timeout','ngProgressFactory','Au
     $scope.isAuthenticated= AuthService.isAuthenticated();
     if (!$scope.isAuthenticated){
        $timeout(function(){$location.path("/login/login");},1000);
+       return;
     }
 
     $scope.id_attribute="email";
