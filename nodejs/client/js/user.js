@@ -1,4 +1,9 @@
-app.controller('user', ['$scope', '$resource','$timeout','ngProgressFactory', function ($scope,$resource,$timeout,ngProgressFactory) {
+app.controller('user', ['$scope', '$resource','$timeout','ngProgressFactory','AuthService','$location', function ($scope,$resource,$timeout,ngProgressFactory,AuthService,$location) {
+    $scope.isAuthenticated= AuthService.isAuthenticated();
+    if (!$scope.isAuthenticated){
+       $timeout(function(){$location.path("/login/login");},1000);
+    }
+
     $scope.id_attribute="email";
     $scope.name_attribute="Email";
     $scope.api_attribute="/user/api";
