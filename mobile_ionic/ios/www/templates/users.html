@@ -1,0 +1,11 @@
+<ion-view view-title="Users">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item item-thumbnail-left item-icon-right" ng-repeat="record in records" ng-click="goTo(record)" ng-init="initRecord(record)">
+        <img class="image-rounded" ng-src="{{record.picture_url}}">
+        {{record.name}}
+        <i class="icon ion-chevron-right"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
